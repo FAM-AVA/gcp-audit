@@ -30,6 +30,7 @@ import util.gcp as gcp
 import yaml
 
 from argparse import ArgumentParser
+from colorama import init
 from termcolor import colored
 from util.filter import filterjson
 
