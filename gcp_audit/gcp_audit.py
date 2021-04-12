@@ -84,9 +84,9 @@ def apply_rules(ruletype, gcpobjects, descfield, outfile, project):
                 res = apply_rule_filters(obj, rule['filters'])
 
             if res:
-                print (colored('MATCH:', 'red')), \
+                print (colored('MATCH:', 'red'), \
                     "object '%s' matches rule '%s'" \
-                    % (obj[descfield], rule['name'])
+                    % (obj[descfield], rule['name']))
 
                 with open(outfile, 'a') as f:
                     f.write(datetime.datetime.now().ctime()
@@ -189,8 +189,8 @@ def main():
             except googleapiclient.errors.HttpError:
                 print (colored('ERROR:', 'red'), "Permission denied?")
 
-    print colored('DONE', 'green'), \
-        ' - results (if any) have been written to %s' % options.output
+    print (colored('DONE', 'green'), \
+        ' - results (if any) have been written to %s' % options.output)
 
 
 if __name__ == "__main__":
