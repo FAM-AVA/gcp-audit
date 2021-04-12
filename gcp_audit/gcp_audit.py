@@ -116,7 +116,7 @@ def apply_rule_filters(obj, filters, filtercondition='and'):
 
 
 def handle_signal(signal, frame):
-    print "SIGINT received. Exiting."
+    print ("SIGINT received. Exiting.")
     sys.exit(0)
 
 
