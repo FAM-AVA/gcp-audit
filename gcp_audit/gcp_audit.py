@@ -180,14 +180,14 @@ def main():
         projects = gcp.get_all_projects()
 
     for project in projects:
-        print colored('Project:', 'blue'), project
+        print (colored('Project:', 'blue'), project)
         for name, check in checks.iteritems():
             try:
                 res = check['func'](project)
                 apply_rules(name, res, check['descfield'],
                             options.output, project)
             except googleapiclient.errors.HttpError:
-                print colored('ERROR:', 'red'), "Permission denied?"
+                print (colored('ERROR:', 'red'), "Permission denied?")
 
     print colored('DONE', 'green'), \
         ' - results (if any) have been written to %s' % options.output
