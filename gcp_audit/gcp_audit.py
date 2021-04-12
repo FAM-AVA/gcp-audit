@@ -31,6 +31,7 @@ import yaml
 
 from argparse import ArgumentParser
 from colorama import init
+init()
 from termcolor import colored
 from util.filter import filterjson
 
